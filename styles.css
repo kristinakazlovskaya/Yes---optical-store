@@ -461,6 +461,10 @@ body {
   padding: 79px 0;
 }
 
+.brands a {
+  text-decoration: none;
+}
+
 .brands_first_line,
 .brands_second_line {
   display: flex;
