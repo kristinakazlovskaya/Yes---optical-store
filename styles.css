@@ -91,7 +91,7 @@ body {
   flex: 0 0 19%;
 }
 
-.header_list > li:last-of-type {
+.header_list .last_header_item {
   flex-basis: 44%;
   justify-content: flex-end;
   padding-right: 70px;
@@ -124,8 +124,7 @@ body {
 .header_link:hover,
 .sub-menu_link:hover,
 .sub_subheading:hover,
-.logo .back:hover,
-.header_list > li:last-of-type:hover .header_link {
+.header_list > .last_header_item:hover .header_link {
   color: #ffbcbc;
   transition: ease 0.2s;
 }
@@ -168,7 +167,7 @@ body {
   transition: ease 0.2s;
 }
 
-.header_list > li:last-of-type:hover .sub-menu_list {
+.header_list > .last_header_item:hover .sub-menu_list {
   display: block;
 }
 
@@ -795,11 +794,6 @@ input[type="submit"]:hover {
   font-weight: 400;
 }
 
-.logo .back {
-  font-size: 14px;
-  transform: translateY(7px);
-}
-
 .slider_gallery {
   max-width: 45%;
   margin: 0 0 150px 30px;
@@ -1202,13 +1196,17 @@ input[type="checkbox"] {
     justify-content: flex-start;
   }
 
-  .header_list > li:last-of-type {
+  .header_list > .last_header_item {
     border: 0;
     justify-content: flex-start;
   }
 
-  .header_list > li:last-of-type > p {
+  .header_list > .last_header_item > p {
     display: none;
+  }
+
+  .header_list > .last_header_item:hover .sub-menu_list {
+    display: flex;
   }
 
   .header_list > li:first-of-type {
@@ -1236,7 +1234,7 @@ input[type="checkbox"] {
   }
 
   .sub-menu_list {
-    display: block;
+    display: flex;
     position: relative;
     top: 0;
     left: 0;
@@ -1256,7 +1254,6 @@ input[type="checkbox"] {
 
   .sub-menu_list li {
     text-align: left;
-    display: inline-block;
   }
 
   .sub-menu_list li:first-of-type {
@@ -1482,14 +1479,6 @@ input[type="checkbox"] {
     justify-content: center;
   }
 
-  .logo .back > span {
-    display: inline-block;
-  }
-
-  .logo .back {
-    transform: translateY(4px);
-  }
-
   .gls_item {
     flex-direction: column;
   }
@@ -1543,7 +1532,7 @@ input[type="checkbox"] {
     position: absolute;
     bottom: 15px;
     padding: 15px;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.9);
   }
 
   .mobile_version_catalog a {
@@ -1597,16 +1586,8 @@ input[type="checkbox"] {
   .contacts_second_img:hover {
     transform: scale(1);
   }
-}
 
-@media (max-width: 860px) {
-  .back span {
-    display: none;
-  }
-}
-
-@media (max-width: 378px) {
-  .logo .back span {
-    display: none;
+  .header_list .header_item_contacts {
+    border-bottom: 2px solid #000;
   }
 }
